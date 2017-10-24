@@ -17,11 +17,13 @@ namespace Места_писания
     {
         ArrayList dt;
         ArrayList mp;
+        ArrayList vyvod;
         public Form1()
         {
             InitializeComponent();
             dt = new ArrayList();
             mp = new ArrayList();
+            vyvod = new ArrayList();
             if (File.Exists("daty"))
             {
                 string[] temp = File.ReadAllLines("daty");
@@ -114,6 +116,25 @@ namespace Места_писания
                 poisk(str);
             }
         }
+        string poisk(string str,string result)
+        {
+            int index = dt.IndexOf(str);
+            if (index >= 0)
+            {
+                if(result!="")
+                result+=","+mp[index];
+                //text += (string)mp[index]+"\n";
+                Stack.Add(mp[index]);
+                Stack1.Add(dt[index]);
+                mp.RemoveAt(index);
+                dt.RemoveAt(index);
+                string res = poisk(str,result);
+                mp.Add(Stack[index]);
+                dt.Add(Stack1[index]);
+                return res;
+            }
+            return result;
+        }
         void update()
         {
             string str = Convert.ToString(dateTimePicker2.Value.Date);
@@ -160,9 +181,29 @@ namespace Места_писания
             }
         }
 
+        void vivod_word()
+        {
+            vyvod.Clear();
+            for (DateTime datetime = dateTimePicker3.Value; datetime < dateTimePicker4.Value; datetime.AddDays(1))
+            {
+                String element = datetime.ToShortDateString() + " - " + poisk(Convert.ToString(datetime), "");
+                vyvod.Add(element);
+            }
+        }
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             button3.Visible = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
         }
     }
 }
