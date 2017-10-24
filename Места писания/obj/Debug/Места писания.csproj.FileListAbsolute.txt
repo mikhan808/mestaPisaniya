@@ -1,0 +1,9 @@
+c:\users\администратор\documents\visual studio 2015\Projects\Места писания\Места писания\bin\Debug\Места писания.exe.config
+c:\users\администратор\documents\visual studio 2015\Projects\Места писания\Места писания\bin\Debug\Места писания.exe
+c:\users\администратор\documents\visual studio 2015\Projects\Места писания\Места писания\bin\Debug\Места писания.pdb
+c:\users\администратор\documents\visual studio 2015\Projects\Места писания\Места писания\obj\Debug\Места писания.csprojResolveAssemblyReference.cache
+c:\users\администратор\documents\visual studio 2015\Projects\Места писания\Места писания\obj\Debug\Места_писания.Form1.resources
+c:\users\администратор\documents\visual studio 2015\Projects\Места писания\Места писания\obj\Debug\Места_писания.Properties.Resources.resources
+c:\users\администратор\documents\visual studio 2015\Projects\Места писания\Места писания\obj\Debug\Места писания.csproj.GenerateResource.Cache
+c:\users\администратор\documents\visual studio 2015\Projects\Места писания\Места писания\obj\Debug\Места писания.exe
+c:\users\администратор\documents\visual studio 2015\Projects\Места писания\Места писания\obj\Debug\Места писания.pdb
